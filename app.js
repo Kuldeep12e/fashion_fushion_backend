@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 app.use(cors({
-    origin:'https://fashion-fusion-pi.vercel.app/', // Replace with your frontend origin
+    origin:'https://fashion-fusion-pi.vercel.app', // Replace with your frontend origin
     credentials: true
 }));
 
