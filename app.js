@@ -12,7 +12,12 @@ const app = express();
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config({ path: 'backend/config/config.env' });
 }
-app.use(cors());
+
+app.use(cors({
+    origin:'https://fashion-fusion-pi.vercel.app/', // Replace with your frontend origin
+    credentials: true
+}));
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
